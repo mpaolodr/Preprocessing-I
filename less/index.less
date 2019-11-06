@@ -134,6 +134,14 @@ table {
 //variables
 @header-font: "Arvo";
 @main-font: "work sans";
+@background-color: #2f4f4f;
+@main-color: #fff;
+
+//mixins
+.top-section() {
+  display: flex;
+  justify-content: space-between;
+}
 
 * {
   box-sizing: border-box;
@@ -142,4 +150,93 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 80%;
+
+  // for tablet
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  } //media queries for tablet ends here
+
+  //for mobile
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  } //media queries for mobile ends here
+}
+
+header {
+  border: 5px solid black;
+  width: 100%;
+  background-color: @background-color;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //for tablet
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  } //media queries for tablet for header ends here
+
+  .logo-container {
+    border: 2px solid black;
+    width: 28%;
+    padding: 1%;
+
+    //for tablet
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 3%;
+    } //media queries for tablet for logo-container ends here
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      font-family: @header-font;
+      color: #fff;
+    } //h1  ends here
+  } //logo container ends here
+
+  nav {
+    border: 2px solid black;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+
+    //for tablet
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    } //media queries for tablet for nav ends here
+
+    //for mobile
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    } //media queries for mobile for nav ends here
+
+    a {
+      font-size: 1.5rem;
+      color: @main-color;
+      font-family: @main-font;
+      text-decoration: none;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+
+      //for mobile
+      @media screen and (max-width: 480px) {
+        margin: 2% 0;
+        font-size: 1rem;
+      } //media queries for mobile for a ends here
+    } //a ends here
+  } //nav ends here
+} //header container ends here

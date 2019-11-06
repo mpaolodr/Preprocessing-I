@@ -281,12 +281,12 @@ header nav a {
   background-color: #2f4f4f;
 }
 .intro .bottom-section p {
+  font-size: 1.7rem;
+  margin-bottom: 2%;
   color: #fff;
   font-family: "work sans";
-  font-size: 1.7rem;
   line-height: 1.5;
   letter-spacing: 0.1rem;
-  margin-bottom: 2%;
 }
 @media screen and (max-width: 768px) {
   .intro .bottom-section p {
@@ -315,4 +315,54 @@ header nav a {
     width: 15%;
     font-size: 1rem;
   }
+}
+.skills {
+  border: 5px solid black;
+  padding: 2%;
+}
+.skills .top-section {
+  border: 3px solid black;
+  background-color: #2f4f4f;
+  display: flex;
+  justify-content: space-between;
+}
+.skills .top-section .background {
+  border: 2px solid black;
+  width: 45%;
+}
+.skills .top-section .background h2 {
+  margin-bottom: 4%;
+  font-size: 2.5rem;
+  font-family: "Arvo";
+  color: #fff;
+  font-weight: 500;
+}
+.skills .top-section .background p {
+  color: #fff;
+  font-family: "work sans";
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+.skills .top-section .stuff {
+  border: 2px solid black;
+  width: 45%;
+}
+.skills .top-section .stuff h2 {
+  margin-bottom: 4%;
+  font-size: 2.5rem;
+  font-family: "Arvo";
+  color: #fff;
+  font-weight: 500;
+}
+.skills .top-section .stuff table {
+  color: #fff;
+  font-family: "work sans";
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.skills .top-section .stuff table td {
+  padding: 3% 0;
 }

@@ -143,6 +143,20 @@ table {
   justify-content: space-between;
 }
 
+.paragraph() {
+  color: @main-color;
+  font-family: @main-font;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+.skills-header() {
+  font-size: 2.5rem;
+  font-family: @header-font;
+  color: @main-color;
+  font-weight: 500;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -160,7 +174,6 @@ body {
 
 .main-container {
   width: 80%;
-
   // for tablet
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -310,12 +323,9 @@ header {
     background-color: @background-color;
 
     p {
-      color: @main-color;
-      font-family: @main-font;
       font-size: 1.7rem;
-      line-height: 1.5;
-      letter-spacing: 0.1rem;
       margin-bottom: 2%;
+      .paragraph();
 
       //for tablet
       @media screen and (max-width: 768px) {
@@ -343,8 +353,55 @@ header {
         @media screen and (max-width: 768px) {
           width: 15%;
           font-size: 1rem;
+        } //media queries for tablet for button ends here
+      } //button ends here
+    } //button-container ends here
+  } //bottom section ends here
+} //intro section styles end here
+
+//skills section styles starts here
+.skills {
+  border: 5px solid black;
+  padding: 2%;
+
+  .top-section {
+    border: 3px solid black;
+    background-color: @background-color;
+    .top-section();
+
+    .background {
+      border: 2px solid black;
+      width: 45%;
+
+      h2 {
+        margin-bottom: 4%;
+        .skills-header();
+      }
+
+      p {
+        .paragraph();
+        font-size: 1.2rem;
+      }
+    }
+
+    .stuff {
+      border: 2px solid black;
+      width: 45%;
+
+      h2 {
+        margin-bottom: 4%;
+        .skills-header();
+      }
+
+      table {
+        .paragraph();
+        font-size: 1.5rem;
+        width: 100%;
+
+        td {
+          padding: 3% 0;
         }
       }
     }
-  } //bottom section ends here
-} //intro section styles end here
+  } //top-section for skills ends here
+} //skills section styles end here

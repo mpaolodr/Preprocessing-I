@@ -366,3 +366,32 @@ header nav a {
 .skills .top-section .stuff table td {
   padding: 3% 0;
 }
+.skills .bottom-section {
+  border: 5px solid black;
+  background-color: #2f4f4f;
+  padding-top: 2%;
+}
+.skills .bottom-section h2 {
+  font-size: 2.5rem;
+  font-family: "Arvo";
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+.skills .bottom-section table {
+  width: 100%;
+}
+.skills .bottom-section table th {
+  font-family: "Arvo";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 2%;
+}
+.skills .bottom-section table td {
+  font-family: "work sans";
+  font-size: 1rem;
+  color: #fff;
+  padding: 1%;
+  text-align: center;
+}

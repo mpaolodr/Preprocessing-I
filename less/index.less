@@ -402,6 +402,37 @@ header {
           padding: 3% 0;
         }
       }
-    }
+    } //stuff ends here
   } //top-section for skills ends here
+
+  .bottom-section {
+    border: 5px solid black;
+    background-color: @background-color;
+    padding-top: 2%;
+
+    h2 {
+      .skills-header();
+      margin-bottom: 2%;
+    }
+
+    table {
+      width: 100%;
+
+      th {
+        font-family: @header-font;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: @main-color;
+        padding: 2%;
+      }
+
+      td {
+        font-family: @main-font;
+        font-size: 1rem;
+        color: @main-color;
+        padding: 1%;
+        text-align: center;
+      }
+    }
+  } // bottom section of skills ends here
 } //skills section styles end here

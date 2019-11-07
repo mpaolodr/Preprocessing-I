@@ -132,7 +132,6 @@ table {
 }
 html,
 body {
-  height: 100%;
   font-size: 62.5%;
 }
 body {
@@ -141,6 +140,7 @@ body {
 }
 .main-container {
   width: 80%;
+  background-color: #c0c0c0;
 }
 @media screen and (max-width: 768px) {
   .main-container {
@@ -153,7 +153,6 @@ body {
   }
 }
 header {
-  border: 5px solid black;
   width: 100%;
   background-color: #2f4f4f;
   padding: 2%;
@@ -167,7 +166,6 @@ header {
   }
 }
 header .logo-container {
-  border: 2px solid black;
   width: 28%;
   padding: 1%;
 }
@@ -185,7 +183,6 @@ header .logo-container h1 {
   color: #fff;
 }
 header nav {
-  border: 2px solid black;
   width: 70%;
   display: flex;
   justify-content: space-between;
@@ -217,11 +214,10 @@ header nav a {
   }
 }
 .intro {
-  border: 5px solid black;
   padding: 2%;
 }
 .intro .top-section {
-  border: 2px solid black;
+  padding: 5%;
   background-color: #2f4f4f;
   display: flex;
   justify-content: space-between;
@@ -233,7 +229,6 @@ header nav a {
   }
 }
 .intro .top-section .profile {
-  border: 2px solid black;
   margin-bottom: 2%;
   width: 30%;
 }
@@ -245,9 +240,9 @@ header nav a {
 }
 .intro .top-section .profile img {
   width: 100%;
+  height: 100%;
 }
 .intro .top-section div {
-  border: 1px solid black;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
@@ -266,19 +261,29 @@ header nav a {
   font-family: "Arvo";
   margin-bottom: 2%;
 }
+@media screen and (max-width: 480px) {
+  .intro .top-section div h2 {
+    font-size: 2rem;
+  }
+}
 .intro .top-section div h3 {
   font-size: 2rem;
   color: #fff;
   font-family: "work sans";
   margin-bottom: 2%;
 }
+@media screen and (max-width: 480px) {
+  .intro .top-section div h3 {
+    font-size: 1.5rem;
+  }
+}
 .intro .divider {
   border: 3px dotted #000;
   margin: 3% 0;
 }
 .intro .bottom-section {
-  border: 5px solid black;
   background-color: #2f4f4f;
+  padding: 5%;
 }
 .intro .bottom-section p {
   font-size: 1.7rem;
@@ -292,6 +297,11 @@ header nav a {
   .intro .bottom-section p {
     font-size: 1.3rem;
     line-height: 1.3;
+  }
+}
+@media screen and (max-width: 480px) {
+  .intro .bottom-section p {
+    font-size: 1rem;
   }
 }
 .intro .bottom-section .button-container {
@@ -316,19 +326,40 @@ header nav a {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .intro .bottom-section .button-container button {
+    width: 20%;
+    font-size: 0.8rem;
+  }
+}
 .skills {
-  border: 5px solid black;
   padding: 2%;
 }
 .skills .top-section {
-  border: 3px solid black;
   background-color: #2f4f4f;
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 480px) {
+  .skills .top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .skills .top-section .background {
-  border: 2px solid black;
   width: 45%;
+  padding: 5%;
+}
+@media screen and (max-width: 768px) {
+  .skills .top-section .background {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills .top-section .background {
+    width: 100%;
+    margin-bottom: 2%;
+  }
 }
 .skills .top-section .background h2 {
   margin-bottom: 4%;
@@ -337,6 +368,12 @@ header nav a {
   color: #fff;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .skills .top-section .background h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 .skills .top-section .background p {
   color: #fff;
   font-family: "work sans";
@@ -344,9 +381,24 @@ header nav a {
   letter-spacing: 0.1rem;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 768px) {
+  .skills .top-section .background p {
+    font-size: 1rem;
+  }
+}
 .skills .top-section .stuff {
-  border: 2px solid black;
   width: 45%;
+  padding: 5%;
+}
+@media screen and (max-width: 768px) {
+  .skills .top-section .stuff {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills .top-section .stuff {
+    width: 100%;
+  }
 }
 .skills .top-section .stuff h2 {
   margin-bottom: 4%;
@@ -354,6 +406,12 @@ header nav a {
   font-family: "Arvo";
   color: #fff;
   font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .skills .top-section .stuff h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 .skills .top-section .stuff table {
   color: #fff;
@@ -363,13 +421,32 @@ header nav a {
   font-size: 1.5rem;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .skills .top-section .stuff table {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
 .skills .top-section .stuff table td {
   padding: 3% 0;
 }
+@media screen and (max-width: 768px) {
+  .skills .top-section .stuff table td {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills .top-section .stuff table td {
+    padding: 2%;
+  }
+}
 .skills .bottom-section {
-  border: 5px solid black;
   background-color: #2f4f4f;
-  padding-top: 2%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .skills .bottom-section h2 {
   font-size: 2.5rem;
@@ -377,6 +454,11 @@ header nav a {
   color: #fff;
   font-weight: 500;
   margin-bottom: 2%;
+}
+@media screen and (max-width: 768px) {
+  .skills .bottom-section h2 {
+    font-size: 2rem;
+  }
 }
 .skills .bottom-section table {
   width: 100%;
@@ -388,10 +470,80 @@ header nav a {
   color: #fff;
   padding: 2%;
 }
+@media screen and (max-width: 768px) {
+  .skills .bottom-section table th {
+    font-size: 1.2rem;
+  }
+}
 .skills .bottom-section table td {
+  width: 20%;
   font-family: "work sans";
   font-size: 1rem;
   color: #fff;
   padding: 1%;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .skills .bottom-section table td {
+    padding: 2%;
+  }
+}
+.contact {
+  padding: 2%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.contact div {
+  background-color: #2f4f4f;
+  width: 100%;
+  padding: 5%;
+}
+.contact div h2 {
+  font-size: 2.5rem;
+  font-family: "Arvo";
+  color: #fff;
+  font-weight: 500;
+  margin-top: 1%;
+}
+@media screen and (max-width: 768px) {
+  .contact div h2 {
+    font-size: 2rem;
+  }
+}
+.contact div p {
+  color: #fff;
+  font-family: "work sans";
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  margin: 2% 0;
+}
+@media screen and (max-width: 768px) {
+  .contact div p {
+    font-size: 0.8rem;
+  }
+}
+.contact div p i {
+  margin-right: 10px;
+}
+footer {
+  background-color: #2f4f4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: #fff;
+  font-family: "work sans";
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-size: 1rem;
+  margin: 2% 0;
+}
+@media screen and (max-width: 768px) {
+  footer p {
+    font-size: 0.8rem;
+  }
 }

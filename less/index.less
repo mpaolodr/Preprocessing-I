@@ -163,7 +163,6 @@ table {
 
 html,
 body {
-  height: 100%;
   font-size: 62.5%;
 }
 
@@ -174,6 +173,8 @@ body {
 
 .main-container {
   width: 80%;
+  background-color: #c0c0c0;
+
   // for tablet
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -186,7 +187,6 @@ body {
 }
 
 header {
-  border: 5px solid black;
   width: 100%;
   background-color: @background-color;
   padding: 2%;
@@ -200,7 +200,6 @@ header {
   } //media queries for tablet for header ends here
 
   .logo-container {
-    border: 2px solid black;
     width: 28%;
     padding: 1%;
 
@@ -220,7 +219,6 @@ header {
   } //logo container ends here
 
   nav {
-    border: 2px solid black;
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -255,11 +253,10 @@ header {
 } //header container ends here
 
 .intro {
-  border: 5px solid black;
   padding: 2%;
 
   .top-section {
-    border: 2px solid black;
+    padding: 5%;
     background-color: @background-color;
     .top-section();
     flex-direction: column;
@@ -270,7 +267,6 @@ header {
     }
 
     .profile {
-      border: 2px solid black;
       margin-bottom: 2%;
       width: 30%;
       //for tablet
@@ -281,10 +277,10 @@ header {
 
       img {
         width: 100%;
+        height: 100%;
       }
     } //profile ends here
     div {
-      border: 1px solid black;
       width: 100%;
 
       //for tablet
@@ -302,6 +298,11 @@ header {
         color: @main-color;
         font-family: @header-font;
         margin-bottom: 2%;
+
+        //for mobile
+        @media screen and (max-width: 480px) {
+          font-size: 2rem;
+        }
       }
 
       h3 {
@@ -309,6 +310,11 @@ header {
         color: @main-color;
         font-family: @main-font;
         margin-bottom: 2%;
+
+        //for mobile
+        @media screen and (max-width: 480px) {
+          font-size: 1.5rem;
+        }
       }
     } // div below profile styles ends here
   } //top-section ends here
@@ -319,8 +325,8 @@ header {
   }
 
   .bottom-section {
-    border: 5px solid black;
     background-color: @background-color;
+    padding: 5%;
 
     p {
       font-size: 1.7rem;
@@ -332,6 +338,11 @@ header {
         font-size: 1.3rem;
         line-height: 1.3;
       } // media for tablet ends here
+
+      //for mobile
+      @media screen and (max-width: 480px) {
+        font-size: 1rem;
+      }
     }
 
     .button-container {
@@ -354,6 +365,12 @@ header {
           width: 15%;
           font-size: 1rem;
         } //media queries for tablet for button ends here
+
+        //for mobile
+        @media screen and (max-width: 768px) {
+          width: 20%;
+          font-size: 0.8rem;
+        }
       } //button ends here
     } //button-container ends here
   } //bottom section ends here
@@ -361,36 +378,77 @@ header {
 
 //skills section styles starts here
 .skills {
-  border: 5px solid black;
   padding: 2%;
 
   .top-section {
-    border: 3px solid black;
     background-color: @background-color;
     .top-section();
 
+    //for mobile
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .background {
-      border: 2px solid black;
       width: 45%;
+      padding: 5%;
+
+      @media screen and (max-width: 768px) {
+        width: 50%;
+      }
+
+      //for mobile
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        margin-bottom: 2%;
+      }
 
       h2 {
         margin-bottom: 4%;
         .skills-header();
+
+        //for tablet
+        @media screen and (max-width: 768px) {
+          font-size: 2rem;
+          text-align: center;
+        }
       }
 
       p {
         .paragraph();
         font-size: 1.2rem;
+
+        //for tablet
+        @media screen and (max-width: 768px) {
+          font-size: 1rem;
+        }
       }
     }
 
     .stuff {
-      border: 2px solid black;
       width: 45%;
+      padding: 5%;
+
+      //for tablet
+      @media screen and (max-width: 768px) {
+        width: 50%;
+      }
+
+      //for mobile
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
 
       h2 {
         margin-bottom: 4%;
         .skills-header();
+
+        //for tablet
+        @media screen and (max-width: 768px) {
+          font-size: 2rem;
+          text-align: center;
+        }
       }
 
       table {
@@ -398,21 +456,44 @@ header {
         font-size: 1.5rem;
         width: 100%;
 
+        //for tablet
+        @media screen and (max-width: 768px) {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+
         td {
           padding: 3% 0;
-        }
-      }
+
+          //for tablet
+          @media screen and (max-width: 768px) {
+            padding: 5%;
+          }
+
+          @media screen and (max-width: 480px) {
+            padding: 2%;
+          }
+        } //td ends here
+      } //table ends here
     } //stuff ends here
   } //top-section for skills ends here
 
   .bottom-section {
-    border: 5px solid black;
     background-color: @background-color;
-    padding-top: 2%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     h2 {
       .skills-header();
       margin-bottom: 2%;
+
+      //for tablet
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     table {
@@ -424,15 +505,83 @@ header {
         font-weight: 700;
         color: @main-color;
         padding: 2%;
+
+        //for tablet
+        @media screen and (max-width: 768px) {
+          font-size: 1.2rem;
+        }
       }
 
       td {
+        width: 20%;
         font-family: @main-font;
         font-size: 1rem;
         color: @main-color;
         padding: 1%;
         text-align: center;
-      }
-    }
+
+        //for tablet
+        @media screen and (max-width: 768px) {
+          padding: 2%;
+        }
+      } //td ends here
+    } //table ends here
   } // bottom section of skills ends here
 } //skills section styles end here
+
+.contact {
+  padding: 2%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  div {
+    background-color: @background-color;
+    width: 100%;
+    padding: 5%;
+
+    h2 {
+      .skills-header();
+      margin-top: 1%;
+
+      //for tablet
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      .paragraph();
+      font-size: 1rem;
+      margin: 2% 0;
+
+      //for tablet
+      @media screen and (max-width: 768px) {
+        font-size: 0.8rem;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    } //end of p styles
+  } // end of div styles
+} // end of contact styles
+
+footer {
+  background-color: @background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    .paragraph();
+    text-align: center;
+    font-size: 1rem;
+    margin: 2% 0;
+
+    //for tablet
+    @media screen and (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+}
